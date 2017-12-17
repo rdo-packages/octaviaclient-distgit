@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a72e520_85dc8276",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-17T13:09:59Z",
+      "side": 1,
+      "message": "Not sure that would make much of an actual difference, but for consistency with:\nhttps://github.com/rdo-packages/octavia-distgit/blob/rpm-master/openstack-octavia.spec\nhttps://github.com/rdo-packages/neutronclient-distgit/blob/rpm-master/python-neutronclient.spec\n\nCan you please move it to be the first line?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 71
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_65f866e6",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-17T13:09:59Z",
+      "side": 1,
+      "message": "I compared this to https://github.com/rdo-packages/neutronclient-distgit/blob/rpm-master/python-neutronclient.spec\n\nFollowing the same logic, this should provably point to https://storyboard.openstack.org/#!/project/911 , no?",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 51
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_45f36a0a",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-17T13:09:59Z",
+      "side": 1,
+      "message": "upstream_version",
+      "range": {
+        "startLine": 19,
+        "startChar": 65,
+        "endLine": 19,
+        "endChar": 72
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
