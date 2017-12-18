@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a72e520_c5f03acc",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-12-18T14:34:37Z",
+      "side": 1,
+      "message": "Nit: this should be \"Test\"",
+      "range": {
+        "startLine": 148,
+        "startChar": 2,
+        "endLine": 148,
+        "endChar": 15
+      },
+      "revId": "4aa9a87ce380f6b677a0d0dc9a9c5862baed146e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_a5e33e04",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-12-18T14:34:37Z",
+      "side": 1,
+      "message": "This should be python2_sitelib, otherwise tests will also be included in the package.",
+      "range": {
+        "startLine": 244,
+        "startChar": 11,
+        "endLine": 244,
+        "endChar": 19
+      },
+      "revId": "4aa9a87ce380f6b677a0d0dc9a9c5862baed146e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
