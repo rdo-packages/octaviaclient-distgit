@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_055ed2e9",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2017-12-18T06:51:01Z",
+      "side": 1,
+      "message": "It doesn\u0027t make any difference but I\u0027ll move it up :)",
+      "parentUuid": "5a72e520_85dc8276",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 71
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_65f866e6",
         "filename": "python-octaviaclient.spec",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_2563ceb2",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2017-12-18T06:51:01Z",
+      "side": 1,
+      "message": "The reason for linking to pypi was that I believe storyboard does not provide a good entry point for users to get info about python-octaviaclient. Launchpad, on the other end, does. Leaving pointing to pypi would stay consistent with the already approved .spec for Fedora.\n\nSee https://bugzilla.redhat.com/show_bug.cgi?id\u003d1506722#c3",
+      "parentUuid": "5a72e520_65f866e6",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 51
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_45f36a0a",
         "filename": "python-octaviaclient.spec",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2017-12-17T13:09:59Z",
       "side": 1,
       "message": "upstream_version",
+      "range": {
+        "startLine": 19,
+        "startChar": 65,
+        "endLine": 19,
+        "endChar": 72
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_4558cafa",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2017-12-18T06:51:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a72e520_45f36a0a",
       "range": {
         "startLine": 19,
         "startChar": 65,
