@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_85f802c6",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-18T09:38:24Z",
+      "side": 1,
+      "message": "fair enough :-)",
+      "parentUuid": "5a72e520_2563ceb2",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 51
+      },
+      "revId": "c7f9d835a7ec1834cd9bb6194e35a402c8517172",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_45f36a0a",
         "filename": "python-octaviaclient.spec",
         "patchSetId": 4
