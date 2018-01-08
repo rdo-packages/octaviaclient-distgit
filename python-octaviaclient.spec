@@ -134,9 +134,7 @@ Requires:       python3-wrapt >= 1.7.0
 Summary:        Documentation for OpenStack Octavia Client
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-openstackdocstheme
-BuildRequires:  python-keystoneauth1
 BuildRequires:  python-keystoneclient
 BuildRequires:  python-osc-lib
 BuildRequires:  python-openstackclient
@@ -154,14 +152,11 @@ Octavia API.
 Summary:        OpenStack Octavia client tests
 
 Requires:       python2-%{pypi_name} = %{version}-%{release}
-Requires:       python-coverage >= 4.0
 Requires:       python-fixtures >= 1.3.1
 Requires:       python-mock
 Requires:       python-testrepository >= 0.0.18
 Requires:       python-testscenarios >= 0.4
 Requires:       python-testtools
-Requires:       python-oslo-sphinx >= 4.7.0
-Requires:       python-sphinx
 Requires:       python-subunit >= 0.0.18
 Requires:       python-webob >= 1.2.3
 Requires:       python-osc-lib
@@ -180,15 +175,12 @@ This package contains the example client test files.
 Summary:        OpenStack Octavia client tests
 
 Requires:       python3-%{pypi_name} = %{version}-%{release}
-Requires:       python3-coverage >= 4.0
 Requires:       python3-fixtures >= 1.3.1
 Requires:       python3-mock
 Requires:       python3-testrepository >= 0.0.18
 Requires:       python3-testscenarios >= 0.4
 Requires:       python3-testtools
 Requires:       python3-osc-lib >= 1.5.1
-Requires:       python3-oslo-sphinx >= 4.7.0
-Requires:       python3-sphinx
 Requires:       python3-subunit >= 0.0.18
 Requires:       python3-webob >= 1.2.3
 Requires:       python3-osc-lib
