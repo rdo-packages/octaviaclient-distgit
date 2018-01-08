@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa963961_45069c21",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2018-01-08T18:47:30Z",
+      "side": 1,
+      "message": "I guess oslo-sphinx is also not needed.",
+      "range": {
+        "startLine": 162,
+        "startChar": 15,
+        "endLine": 162,
+        "endChar": 43
+      },
+      "revId": "0a547116bdd0cddb53eb8296b8050a60326bbc74",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
