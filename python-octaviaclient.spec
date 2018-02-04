@@ -264,3 +264,4 @@ rm -rf .testrepository
 
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/python-octaviaclient/commit/?id=f26aaace87e564a139688f7b6864f88b1f56e2a5
