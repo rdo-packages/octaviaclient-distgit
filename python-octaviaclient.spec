@@ -28,46 +28,61 @@ BuildArch:      noarch
 
 BuildRequires:  git
 BuildRequires:  python2-devel
-BuildRequires:  python-setuptools
-BuildRequires:  python-pbr
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-keystoneauth1
+BuildRequires:  python2-mock
+BuildRequires:  python2-osc-lib
+BuildRequires:  python2-osc-lib-tests
+BuildRequires:  python2-oslo-log
+BuildRequires:  python2-openstackclient
+%if 0%{?fedora} > 0
+BuildRequires:  python2-cliff
+%else
 BuildRequires:  python-cliff
-BuildRequires:  python-keystoneauth1
-BuildRequires:  python-mock
-BuildRequires:  python-osc-lib
-BuildRequires:  python-osc-lib-tests
-BuildRequires:  python-oslo-log
-BuildRequires:  python-openstackclient
+%endif
 
-Requires:       python-appdirs >= 1.3.0
-Requires:       python-babel >= 2.3.4
+Requires:       python2-appdirs >= 1.3.0
+Requires:       python2-babel >= 2.3.4
+Requires:       python2-debtcollector >= 1.2.0
+Requires:       python2-funcsigs >= 1.0.0
+Requires:       python2-iso8601 >= 0.1.11
+Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-os-client-config >= 1.28.0
+Requires:       python2-osc-lib >= 1.8.0
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-pbr
+Requires:       python2-prettytable >= 0.7.1
+Requires:       python2-neutronclient >= 6.3.0
+Requires:       python2-openstackclient >= 3.12.0
+Requires:       python2-pytz >= 2013.6
+Requires:       python2-requests >= 2.14.2
+Requires:       python2-requestsexceptions >= 1.2.0
+Requires:       python2-six >= 1.10.0
+Requires:       python2-stevedore >= 1.20.0
+Requires:       python2-unicodecsv >= 0.8.0
+%if 0%{?fedora} > 0
+Requires:       python2-cliff >= 2.8.0
+Requires:       python2-cmd2 >= 0.6.7
+Requires:       python2-monotonic >= 0.6
+Requires:       python2-netaddr >= 0.7.18
+Requires:       python2-netifaces >= 0.10.4
+Requires:       python2-pyparsing >= 2.1.0
+Requires:       python2-pyyaml >= 3.10
+Requires:       python2-simplejson >= 3.5.1
+Requires:       python2-wrapt >= 1.7.0
+%else
 Requires:       python-cliff >= 2.8.0
 Requires:       python-cmd2 >= 0.6.7
-Requires:       python-debtcollector >= 1.2.0
-Requires:       python-funcsigs >= 1.0.0
-Requires:       python-iso8601 >= 0.1.11
-Requires:       python-keystoneauth1 >= 3.3.0
 Requires:       python-monotonic >= 0.6
 Requires:       python-netaddr >= 0.7.18
 Requires:       python-netifaces >= 0.10.4
-Requires:       python-os-client-config >= 1.28.0
-Requires:       python-osc-lib >= 1.7.0
-Requires:       python-oslo-i18n >= 3.15.3
-Requires:       python-oslo-utils >= 3.31.0
-Requires:       python-pbr
-Requires:       python-positional >= 1.1.1
-Requires:       python-prettytable >= 0.7.1
 Requires:       pyparsing >= 2.1.0
-Requires:       python-neutronclient >= 6.3.0
-Requires:       python-openstackclient >= 3.12.0
-Requires:       pytz >= 2013.6
 Requires:       PyYAML >= 3.10
-Requires:       python-requests >= 2.14.2
-Requires:       python-requestsexceptions >= 1.2.0
 Requires:       python-simplejson >= 3.5.1
-Requires:       python-six >= 1.10.0
-Requires:       python-stevedore >= 1.20.0
-Requires:       python-unicodecsv >= 0.8.0
 Requires:       python-wrapt >= 1.7.0
+%endif
 
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 %{?python_provide:%python_provide python2-%{pypi_name}}
@@ -104,11 +119,10 @@ Requires:       python3-monotonic >= 0.6
 Requires:       python3-netaddr >= 0.7.18
 Requires:       python3-netifaces >= 0.10.4
 Requires:       python3-os-client-config >= 1.28.0
-Requires:       python3-osc-lib >= 1.7.0
+Requires:       python3-osc-lib >= 1.8.0
 Requires:       python3-oslo-i18n >= 3.15.3
-Requires:       python3-oslo-utils >= 3.31.0
+Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-pbr
-Requires:       python3-positional >= 1.1.1
 Requires:       python3-prettytable >= 0.7.1
 Requires:       python3-pyparsing >= 2.1.0
 Requires:       python3-neutronclient >= 6.3.0
@@ -133,11 +147,11 @@ Requires:       python3-wrapt >= 1.7.0
 %package -n python-%{pypi_name}-doc
 Summary:        Documentation for OpenStack Octavia Client
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
-BuildRequires:  python-keystoneclient
-BuildRequires:  python-osc-lib
-BuildRequires:  python-openstackclient
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
+BuildRequires:  python2-keystoneclient
+BuildRequires:  python2-osc-lib
+BuildRequires:  python2-openstackclient
 BuildRequires:  dos2unix
 
 %description -n python-%{pypi_name}-doc
@@ -152,17 +166,23 @@ Octavia API.
 Summary:        OpenStack Octavia client tests
 
 Requires:       python2-%{pypi_name} = %{version}-%{release}
-Requires:       python-fixtures >= 1.3.1
-Requires:       python-mock
+Requires:       python2-fixtures >= 1.3.1
+Requires:       python2-mock
+Requires:       python2-testtools
+Requires:       python2-subunit >= 0.0.18
+Requires:       python2-osc-lib
+Requires:       python2-osc-lib-tests
+Requires:       python2-oslo-log
+Requires:       python2-openstackclient
+%if 0%{?fedora} > 0
+Requires:       python2-testrepository >= 0.0.18
+Requires:       python2-testscenarios >= 0.4
+Requires:       python2-webob >= 1.2.3
+%else
 Requires:       python-testrepository >= 0.0.18
 Requires:       python-testscenarios >= 0.4
-Requires:       python-testtools
-Requires:       python-subunit >= 0.0.18
 Requires:       python-webob >= 1.2.3
-Requires:       python-osc-lib
-Requires:       python-osc-lib-tests
-Requires:       python-oslo-log
-Requires:       python-openstackclient
+%endif
 
 %description -n python2-%{pypi_name}-tests
 OpenStack Octavia client tests
@@ -180,7 +200,7 @@ Requires:       python3-mock
 Requires:       python3-testrepository >= 0.0.18
 Requires:       python3-testscenarios >= 0.4
 Requires:       python3-testtools
-Requires:       python3-osc-lib >= 1.5.1
+Requires:       python3-osc-lib >= 1.8.0
 Requires:       python3-subunit >= 0.0.18
 Requires:       python3-webob >= 1.2.3
 Requires:       python3-osc-lib
