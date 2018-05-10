@@ -146,7 +146,6 @@ BuildRequires:  python2-openstackdocstheme
 BuildRequires:  python2-keystoneclient
 BuildRequires:  python2-osc-lib
 BuildRequires:  python2-openstackclient
-BuildRequires:  dos2unix
 
 %description -n python-%{pypi_name}-doc
 Documentation for the client library for interacting with Openstack
@@ -225,7 +224,6 @@ rm -f {,test-}requirements.txt
 %{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
-dos2unix doc/build/html/_static/jquery.js
 %endif
 
 %install
