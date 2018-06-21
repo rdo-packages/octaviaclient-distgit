@@ -235,11 +235,14 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
+export OS_TEST_PATH='./octaviaclient/tests/unit'
+export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
+export PYTHONPATH=$PWD
+stestr --test-path $OS_TEST_PATH run
 %if 0%{?with_python3}
-%{__python3} setup.py test
-rm -rf .testrepository
+rm -rf .stestr
+stestr-3 --test-path $OS_TEST_PATH run
 %endif
-%{__python2} setup.py test
 
 
 %files -n python2-%{pypi_name}
