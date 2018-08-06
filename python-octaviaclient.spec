@@ -44,14 +44,15 @@ Requires:       python2-cliff >= 2.8.0
 Requires:       python2-debtcollector >= 1.2.0
 Requires:       python2-funcsigs >= 1.0.0
 Requires:       python2-iso8601 >= 0.1.11
-Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-keystoneauth1 >= 3.4.0
 Requires:       python2-os-client-config >= 1.28.0
-Requires:       python2-osc-lib >= 1.8.0
+Requires:       python2-osc-lib >= 1.10.0
 Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-serialization >= 2.18.0
 Requires:       python2-oslo-utils >= 3.33.0
 Requires:       python2-pbr
-Requires:       python2-prettytable >= 0.7.1
-Requires:       python2-neutronclient >= 6.3.0
+Requires:       python2-prettytable >= 0.7.2
+Requires:       python2-neutronclient >= 6.7.0
 Requires:       python2-openstackclient >= 3.12.0
 Requires:       python2-pytz >= 2013.6
 Requires:       python2-requests >= 2.14.2
@@ -108,18 +109,19 @@ Requires:       python3-cmd2 >= 0.6.7
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-funcsigs >= 1.0.0
 Requires:       python3-iso8601 >= 0.1.11
-Requires:       python3-keystoneauth1 >= 3.3.0
+Requires:       python3-keystoneauth1 >= 3.4.0
 Requires:       python3-monotonic >= 0.6
 Requires:       python3-netaddr >= 0.7.18
 Requires:       python3-netifaces >= 0.10.4
 Requires:       python3-os-client-config >= 1.28.0
-Requires:       python3-osc-lib >= 1.8.0
+Requires:       python3-osc-lib >= 1.10.0
 Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-pbr
-Requires:       python3-prettytable >= 0.7.1
+Requires:       python3-prettytable >= 0.7.2
 Requires:       python3-pyparsing >= 2.1.0
-Requires:       python3-neutronclient >= 6.3.0
+Requires:       python3-neutronclient >= 6.7.0
 Requires:       python3-openstackclient >= 3.12.0
 Requires:       python3-pytz >= 2013.6
 Requires:       python3-PyYAML >= 3.10
@@ -191,7 +193,7 @@ Requires:       python3-mock
 Requires:       python3-testrepository >= 0.0.18
 Requires:       python3-testscenarios >= 0.4
 Requires:       python3-testtools
-Requires:       python3-osc-lib >= 1.8.0
+Requires:       python3-osc-lib >= 1.10.0
 Requires:       python3-subunit >= 0.0.18
 Requires:       python3-webob >= 1.2.3
 Requires:       python3-osc-lib
