@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_ba23fba6",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-23T14:18:27Z",
+      "side": 1,
+      "message": "extra \u0027%\u0027",
+      "range": {
+        "startLine": 91,
+        "startChar": 48,
+        "endLine": 91,
+        "endChar": 49
+      },
+      "revId": "fcc133feedfd23645964fb4a8d4748b25688cc87",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_fa29738a",
         "filename": "python-octaviaclient.spec",
         "patchSetId": 1
