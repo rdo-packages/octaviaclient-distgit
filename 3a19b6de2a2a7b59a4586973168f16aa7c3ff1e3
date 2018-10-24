@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_c50ff4df",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2018-10-24T09:20:18Z",
+      "side": 1,
+      "message": "move this part to %if %{pyver} \u003d\u003d 2 at just below line 129,\nRequires: python2-mock as in python3, mock is a builtin standard library.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 35
+      },
+      "revId": "3a19b6de2a2a7b59a4586973168f16aa7c3ff1e3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
