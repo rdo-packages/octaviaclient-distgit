@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_bab9bb7b",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T07:50:45Z",
+      "side": 1,
+      "message": "This should be python-%{pypi_name}, source package is always python-",
+      "range": {
+        "startLine": 21,
+        "startChar": 22,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "c13b7c02cd5e2d866fe158fd2528a5a30c07de8a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_7aac4335",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T07:50:45Z",
+      "side": 1,
+      "message": "Remove this \u0027%\u0027",
+      "range": {
+        "startLine": 114,
+        "startChar": 26,
+        "endLine": 114,
+        "endChar": 27
+      },
+      "revId": "c13b7c02cd5e2d866fe158fd2528a5a30c07de8a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_5aabbf1d",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T07:50:45Z",
+      "side": 1,
+      "message": "This should be:\n\n%{?python_provide:%python_provide python%{pyver}-%{pypi_name}-tests}",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 68
+      },
+      "revId": "c13b7c02cd5e2d866fe158fd2528a5a30c07de8a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_9ab15792",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-10-24T07:50:45Z",
+      "side": 1,
+      "message": "Remove this \u0027%\u0027",
+      "range": {
+        "startLine": 135,
+        "startChar": 30,
+        "endLine": 135,
+        "endChar": 31
+      },
+      "revId": "c13b7c02cd5e2d866fe158fd2528a5a30c07de8a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
