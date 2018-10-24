@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_258c707e",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2018-10-24T08:51:03Z",
+      "side": 1,
+      "message": "For some reason, the package in Fedora 28 provides the following:\n\npython3-PyYAML\npython3-yaml\n\nBut not python3-pyyaml. Since the python2 package also provides python2-yaml, I would suggest to change it to\n\nRequires:  python%{pyver}-yaml \u003e\u003d 3.10",
+      "range": {
+        "startLine": 85,
+        "startChar": 11,
+        "endLine": 85,
+        "endChar": 45
+      },
+      "revId": "15f67a10e2b86a60240bb32bf605af5af1f4962b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
