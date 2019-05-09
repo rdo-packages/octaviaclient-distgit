@@ -45,6 +45,7 @@ BuildRequires:  python%{pyver}-osc-lib-tests
 BuildRequires:  python%{pyver}-oslo-log
 BuildRequires:  python%{pyver}-openstackclient
 BuildRequires:  python%{pyver}-cliff
+BuildRequires:  python%{pyver}-stestr
 
 Requires:       python%{pyver}-appdirs >= 1.3.0
 Requires:       python%{pyver}-babel >= 2.3.4
@@ -124,8 +125,7 @@ Requires:       python%{pyver}-osc-lib
 Requires:       python%{pyver}-osc-lib-tests
 Requires:       python%{pyver}-oslo-log
 Requires:       python%{pyver}-openstackclient
-Requires:       python%{pyver}-testrepository >= 0.0.18
-Requires:       python%{pyver}-testscenarios >= 0.4
+Requires:       python%{pyver}-stestr
 %if %{pyver} == 2
 Requires:       python-webob >= 1.2.3
 %else
