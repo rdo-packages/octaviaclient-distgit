@@ -20,7 +20,7 @@ Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
 Version:        1.8.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
 License:        ASL 2.0
@@ -45,6 +45,7 @@ BuildRequires:  python%{pyver}-osc-lib-tests
 BuildRequires:  python%{pyver}-oslo-log
 BuildRequires:  python%{pyver}-openstackclient
 BuildRequires:  python%{pyver}-cliff
+BuildRequires:  python%{pyver}-stestr
 
 Requires:       python%{pyver}-appdirs >= 1.3.0
 Requires:       python%{pyver}-babel >= 2.3.4
@@ -124,8 +125,7 @@ Requires:       python%{pyver}-osc-lib
 Requires:       python%{pyver}-osc-lib-tests
 Requires:       python%{pyver}-oslo-log
 Requires:       python%{pyver}-openstackclient
-Requires:       python%{pyver}-testrepository >= 0.0.18
-Requires:       python%{pyver}-testscenarios >= 0.4
+Requires:       python%{pyver}-stestr
 %if %{pyver} == 2
 Requires:       python-webob >= 1.2.3
 %else
@@ -158,6 +158,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
+export PYTHON=%{pyver_bin}
 export OS_TEST_PATH='./octaviaclient/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 export PYTHONPATH=$PWD
@@ -181,6 +182,9 @@ stestr-%{pyver} --test-path $OS_TEST_PATH run
 %{pyver_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Fri May 10 2019 Alfredo Moralejo <amoralej@redhat.com> - 1.8.0-2
+- Add stestr as BR and set PYTHON variable to versioned python.
+
 * Mon Mar 11 2019 RDO <dev@lists.rdoproject.org> 1.8.0-1
 - Update to 1.8.0
 
