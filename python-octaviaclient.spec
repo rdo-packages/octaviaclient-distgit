@@ -158,6 +158,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
+export PYTHON=%{pyver_bin}
 export OS_TEST_PATH='./octaviaclient/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 export PYTHONPATH=$PWD
