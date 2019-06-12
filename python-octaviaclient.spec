@@ -11,7 +11,7 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        1.4.0
+Version:        1.4.1
 Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
@@ -276,6 +276,9 @@ rm -rf .testrepository
 
 
 %changelog
+* Wed Jun 12 2019 RDO <dev@lists.rdoproject.org> 1.4.1-1
+- Update to 1.4.1
+
 * Mon Feb 19 2018 RDO <dev@lists.rdoproject.org> 1.4.0-1
 - Update to 1.4.0
 
