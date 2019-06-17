@@ -19,8 +19,8 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        1.8.0
-Release:        2%{?dist}
+Version:        1.8.1
+Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
 License:        ASL 2.0
@@ -182,6 +182,9 @@ stestr-%{pyver} --test-path $OS_TEST_PATH run
 %{pyver_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Mon Jun 17 2019 RDO <dev@lists.rdoproject.org> 1.8.1-1
+- Update to 1.8.1
+
 * Fri May 10 2019 Alfredo Moralejo <amoralej@redhat.com> - 1.8.0-2
 - Add stestr as BR and set PYTHON variable to versioned python.
 
