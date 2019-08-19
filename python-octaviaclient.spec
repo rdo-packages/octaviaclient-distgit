@@ -47,45 +47,21 @@ BuildRequires:  python%{pyver}-openstackclient
 BuildRequires:  python%{pyver}-cliff
 BuildRequires:  python%{pyver}-stestr
 
-Requires:       python%{pyver}-appdirs >= 1.3.0
 Requires:       python%{pyver}-babel >= 2.3.4
 Requires:       python%{pyver}-cliff >= 2.8.0
-Requires:       python%{pyver}-debtcollector >= 1.2.0
-Requires:       python%{pyver}-funcsigs >= 1.0.0
-Requires:       python%{pyver}-iso8601 >= 0.1.11
 Requires:       python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:       python%{pyver}-os-client-config >= 1.28.0
 Requires:       python%{pyver}-osc-lib >= 1.10.0
-Requires:       python%{pyver}-oslo-i18n >= 3.15.3
 Requires:       python%{pyver}-oslo-serialization >= 2.18.0
 Requires:       python%{pyver}-oslo-utils >= 3.33.0
 Requires:       python%{pyver}-pbr
-Requires:       python%{pyver}-prettytable >= 0.7.2
 Requires:       python%{pyver}-neutronclient >= 6.7.0
 Requires:       python%{pyver}-openstackclient >= 3.12.0
-Requires:       python%{pyver}-pytz >= 2013.6
 Requires:       python%{pyver}-requests >= 2.14.2
-Requires:       python%{pyver}-requestsexceptions >= 1.2.0
 Requires:       python%{pyver}-six >= 1.10.0
-Requires:       python%{pyver}-stevedore >= 1.20.0
-Requires:       python%{pyver}-unicodecsv >= 0.8.0
-Requires:       python%{pyver}-netaddr >= 0.7.18
 %if %{pyver} == 2
-Requires:       python-cmd2 >= 0.6.7
-Requires:       python-monotonic >= 0.6
 Requires:       python-netifaces >= 0.10.4
-Requires:       pyparsing >= 2.1.0
-Requires:       PyYAML >= 3.10
-Requires:       python-simplejson >= 3.5.1
-Requires:       python-wrapt >= 1.7.0
 %else
-Requires:       python%{pyver}-cmd2 >= 0.6.7
-Requires:       python%{pyver}-monotonic >= 0.6
 Requires:       python%{pyver}-netifaces >= 0.10.4
-Requires:       python%{pyver}-pyparsing >= 2.1.0
-Requires:       python%{pyver}-yaml >= 3.10
-Requires:       python%{pyver}-simplejson >= 3.5.1
-Requires:       python%{pyver}-wrapt >= 1.7.0
 %endif
 
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
