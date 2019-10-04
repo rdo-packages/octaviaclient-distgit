@@ -76,6 +76,7 @@ Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 Summary:        Documentation for OpenStack Octavia Client
 
 BuildRequires:  python%{pyver}-sphinx
+BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
 BuildRequires:  python%{pyver}-openstackdocstheme
 BuildRequires:  python%{pyver}-keystoneclient
 BuildRequires:  python%{pyver}-osc-lib
