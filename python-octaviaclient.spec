@@ -50,7 +50,7 @@ BuildRequires:  python%{pyver}-stestr
 Requires:       python%{pyver}-babel >= 2.3.4
 Requires:       python%{pyver}-cliff >= 2.8.0
 Requires:       python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:       python%{pyver}-osc-lib >= 1.10.0
+Requires:       python%{pyver}-osc-lib >= 1.8.0
 Requires:       python%{pyver}-oslo-serialization >= 2.18.0
 Requires:       python%{pyver}-oslo-utils >= 3.33.0
 Requires:       python%{pyver}-pbr
