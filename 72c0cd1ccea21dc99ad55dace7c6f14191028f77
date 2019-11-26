@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "af0db7fe_b2bf1853",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2019-11-26T10:48:28Z",
+      "side": 1,
+      "message": "LGTM.\n\nhttps://github.com/openstack/python-octaviaclient/blob/3e83788739f58b5f3c61989a90be9651dd6f7bf4/lower-constraints.txt#L29",
+      "revId": "72c0cd1ccea21dc99ad55dace7c6f14191028f77",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
