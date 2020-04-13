@@ -135,6 +135,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
+rm -f ./octaviaclient/tests/unit/test_hacking.py
 export PYTHON=%{pyver_bin}
 export OS_TEST_PATH='./octaviaclient/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
