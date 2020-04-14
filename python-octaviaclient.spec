@@ -57,12 +57,6 @@ Requires:       python%{pyver}-pbr
 Requires:       python%{pyver}-neutronclient >= 6.7.0
 Requires:       python%{pyver}-openstackclient >= 3.12.0
 Requires:       python%{pyver}-requests >= 2.14.2
-Requires:       python%{pyver}-six >= 1.10.0
-%if %{pyver} == 2
-Requires:       python-netifaces >= 0.10.4
-%else
-Requires:       python%{pyver}-netifaces >= 0.10.4
-%endif
 
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 %{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
