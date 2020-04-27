@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29c28a1d_a85b54bf",
+        "filename": "python-octaviaclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2020-04-27T08:47:39Z",
+      "side": 1,
+      "message": "Should this be \u003e\u003d 1.8.0 ?\n\nhttps://github.com/openstack/python-octaviaclient/blob/2.0.1/requirements.txt#L10\nhttps://github.com/openstack/python-octaviaclient/blob/2.0.1/lower-constraints.txt#L30",
+      "range": {
+        "startLine": 53,
+        "startChar": 16,
+        "endLine": 53,
+        "endChar": 48
+      },
+      "revId": "9dc757bea63bc9ae81194032e2eac8e92b24e77f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
