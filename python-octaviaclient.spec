@@ -19,8 +19,8 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        2.0.1
+Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
 License:        ASL 2.0
@@ -154,3 +154,6 @@ stestr-%{pyver} --test-path $OS_TEST_PATH run
 %{pyver_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Mon Apr 27 2020 RDO <dev@lists.rdoproject.org> 2.0.1-1
+- Update to 2.0.1
+
