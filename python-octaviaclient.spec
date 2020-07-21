@@ -19,7 +19,7 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        1.8.1
+Version:        1.8.2
 Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
@@ -182,6 +182,9 @@ stestr-%{pyver} --test-path $OS_TEST_PATH run
 %{pyver_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Tue Jul 21 2020 RDO <dev@lists.rdoproject.org> 1.8.2-1
+- Update to 1.8.2
+
 * Mon Jun 17 2019 RDO <dev@lists.rdoproject.org> 1.8.1-1
 - Update to 1.8.1
 
