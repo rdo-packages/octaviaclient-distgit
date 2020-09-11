@@ -35,10 +35,9 @@ BuildRequires:  python3-openstackclient
 BuildRequires:  python3-cliff
 BuildRequires:  python3-stestr
 
-Requires:       python3-babel >= 2.3.4
 Requires:       python3-cliff >= 2.8.0
 Requires:       python3-keystoneauth1 >= 3.4.0
-Requires:       python3-osc-lib >= 1.8.0
+Requires:       python3-osc-lib >= 1.14.1
 Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-pbr
@@ -80,7 +79,7 @@ Requires:       python3-fixtures >= 1.3.1
 Requires:       python3-mock
 Requires:       python3-testtools
 Requires:       python3-subunit >= 0.0.18
-Requires:       python3-osc-lib
+Requires:       python3-osc-lib >= 1.14.1
 Requires:       python3-osc-lib-tests
 Requires:       python3-oslo-log
 Requires:       python3-openstackclient
