@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc 1
 
@@ -8,14 +10,25 @@ Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
 Version:        2.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
 License:        ASL 2.0
 URL:            http://pypi.python.org/pypi/%{name}
 Source0:        https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
 BuildArch:      noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+BuildRequires:  openstack-macros
+%endif
 
 %description
 %{common_desc}
@@ -96,6 +109,10 @@ OpenStack Octavia client tests
 This package contains the example client test files.
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -n %{name}-%{upstream_version} -S git
 
 # Let RPM handle the dependencies
@@ -141,6 +158,9 @@ stestr --test-path $OS_TEST_PATH run
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 2.2.0-2
+- Enable sources tarball validation using GPG signature.
+
 * Fri Sep 18 2020 RDO <dev@lists.rdoproject.org> 2.2.0-1
 - Update to 2.2.0
 
