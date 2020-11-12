@@ -35,7 +35,7 @@ BuildRequires:  openstack-macros
 
 %package -n     python3-%{pypi_name}
 
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr
