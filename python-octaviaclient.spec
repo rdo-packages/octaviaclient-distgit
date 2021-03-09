@@ -49,7 +49,7 @@ BuildRequires:  python3-cliff
 BuildRequires:  python3-stestr
 
 Requires:       python3-cliff >= 2.8.0
-Requires:       python3-keystoneauth1 >= 3.4.0
+Requires:       python3-keystoneauth1 >= 3.18.0
 Requires:       python3-osc-lib >= 1.14.1
 Requires:       python3-oslo-serialization >= 2.18.0
 Requires:       python3-oslo-utils >= 3.33.0
