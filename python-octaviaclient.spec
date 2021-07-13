@@ -7,7 +7,7 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        2.0.1
+Version:        2.0.2
 Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
@@ -142,6 +142,9 @@ stestr --test-path $OS_TEST_PATH run
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Tue Jul 13 2021 RDO <dev@lists.rdoproject.org> 2.0.2-1
+- Update to 2.0.2
+
 * Mon Apr 27 2020 RDO <dev@lists.rdoproject.org> 2.0.1-1
 - Update to 2.0.1
 - Remove python2/python3 compatibility in specs
