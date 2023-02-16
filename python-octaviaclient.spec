@@ -57,6 +57,7 @@ Requires:       python3-pbr
 Requires:       python3-neutronclient >= 6.7.0
 Requires:       python3-openstackclient >= 3.12.0
 Requires:       python3-requests >= 2.14.2
+Requires:       python3-munch >= 2.1.0
 
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 %{?python_provide:%python_provide python3-%{pypi_name}}
