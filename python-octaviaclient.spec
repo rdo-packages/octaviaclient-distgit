@@ -47,6 +47,7 @@ BuildRequires:  python3-oslo-log
 BuildRequires:  python3-openstackclient
 BuildRequires:  python3-cliff
 BuildRequires:  python3-stestr
+BuildRequires:  python3-munch
 
 Requires:       python3-cliff >= 2.8.0
 Requires:       python3-keystoneauth1 >= 3.18.0
