@@ -159,3 +159,4 @@ stestr --test-path $OS_TEST_PATH run
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/python-octaviaclient/commit/04344bc3b798670047b507675ded5ace7132551f
