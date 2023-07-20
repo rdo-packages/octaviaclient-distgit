@@ -1,6 +1,12 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order pylint
+# Exclude sphinx from BRs if docs are disabled
+%if ! 0%{?with_doc}
+%global excluded_brs %{excluded_brs} sphinx openstackdocstheme
+%endif
 %global with_doc 1
 
 %global pypi_name octaviaclient
@@ -13,7 +19,7 @@ Version:        XXX
 Release:        XXX
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            http://pypi.python.org/pypi/%{name}
 Source0:        https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
@@ -37,31 +43,10 @@ BuildRequires:  openstack-macros
 
 BuildRequires:  git-core
 BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
-BuildRequires:  python3-pbr
-BuildRequires:  python3-keystoneauth1
-BuildRequires:  python3-mock
-BuildRequires:  python3-osc-lib
+BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-osc-lib-tests
-BuildRequires:  python3-oslo-log
-BuildRequires:  python3-openstackclient
-BuildRequires:  python3-cliff
-BuildRequires:  python3-stestr
-BuildRequires:  python3-munch
-
-Requires:       python3-cliff >= 2.8.0
-Requires:       python3-keystoneauth1 >= 3.18.0
-Requires:       python3-osc-lib >= 1.14.1
-Requires:       python3-oslo-serialization >= 2.18.0
-Requires:       python3-oslo-utils >= 3.33.0
-Requires:       python3-pbr
-Requires:       python3-neutronclient >= 6.7.0
-Requires:       python3-openstackclient >= 3.12.0
-Requires:       python3-requests >= 2.14.2
-Requires:       python3-munch >= 2.1.0
 
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
-%{?python_provide:%python_provide python3-%{pypi_name}}
 
 %description -n python3-%{pypi_name}
 %{common_desc}
@@ -71,12 +56,7 @@ Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 %package -n python-%{pypi_name}-doc
 Summary:        Documentation for OpenStack Octavia Client
 
-BuildRequires:  python3-sphinx
 BuildRequires:  python3-sphinxcontrib-rsvgconverter
-BuildRequires:  python3-openstackdocstheme
-BuildRequires:  python3-keystoneclient
-BuildRequires:  python3-osc-lib
-BuildRequires:  python3-openstackclient
 
 %description -n python-%{pypi_name}-doc
 Documentation for the client library for interacting with Openstack
@@ -87,7 +67,6 @@ Octavia API.
 # Test package
 %package -n python3-%{pypi_name}-tests
 Summary:        OpenStack Octavia client tests
-%{?python_provide:%python_provide python3-%{pypi_name}-tests}
 
 Requires:       python3-%{pypi_name} = %{version}-%{release}
 Requires:       python3-fixtures >= 1.3.1
@@ -99,11 +78,7 @@ Requires:       python3-osc-lib-tests
 Requires:       python3-oslo-log
 Requires:       python3-openstackclient
 Requires:       python3-stestr
-%if 3 == 2
-Requires:       python-webob >= 1.2.3
-%else
 Requires:       python3-webob >= 1.2.3
-%endif
 
 %description -n python3-%{pypi_name}-tests
 OpenStack Octavia client tests
@@ -117,37 +92,53 @@ This package contains the example client test files.
 %endif
 %autosetup -n %{name}-%{upstream_version} -S git
 
-# Let RPM handle the dependencies
-rm -f {,test-}requirements.txt
+
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs}; do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+# Automatic BR generation
+%generate_buildrequires
+%if 0%{?with_doc}
+  %pyproject_buildrequires -t -e %{default_toxenv},docs
+%else
+  %pyproject_buildrequires -t -e %{default_toxenv}
+%endif
 
 %build
-%{py3_build}
+%pyproject_wheel
 
 %if 0%{?with_doc}
 # generate html docs
-sphinx-build -b html doc/source doc/build/html
+%tox -e docs
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
-%{py3_install}
+%pyproject_install
 
 
 %check
 rm -f ./octaviaclient/tests/unit/test_hacking.py
-export PYTHON=%{__python3}
-export OS_TEST_PATH='./octaviaclient/tests/unit'
-export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
-export PYTHONPATH=$PWD
-stestr --test-path $OS_TEST_PATH run
+%tox -e %{default_toxenv}
 
 
 %files -n python3-%{pypi_name}
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/python_%{pypi_name}-*-py%{python3_version}.egg-info
+%{python3_sitelib}/python_%{pypi_name}-*.dist-info
 %exclude %{python3_sitelib}/%{pypi_name}/tests
 
 %if 0%{?with_doc}
