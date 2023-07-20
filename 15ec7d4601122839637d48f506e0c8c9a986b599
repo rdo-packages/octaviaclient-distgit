@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd31f4ce_cbf96751",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-20T10:31:26Z",
+      "side": 1,
+      "message": "FTR munch dep was removed couple of months ago [1]\n\n[1] https://review.opendev.org/q/Iae5b09dc163e8a4e0ed51f065079301b7e4287d3",
+      "revId": "15ec7d4601122839637d48f506e0c8c9a986b599",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
