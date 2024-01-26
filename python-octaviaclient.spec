@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order pylint
@@ -15,7 +15,7 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        3.5.0
+Version:        3.5.1
 Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
@@ -152,6 +152,9 @@ rm -f ./octaviaclient/tests/unit/test_hacking.py
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Fri Jan 26 2024 RDO <dev@lists.rdoproject.org> 3.5.1-1
+- Update to 3.5.1
+
 * Mon Sep 04 2023 RDO <dev@lists.rdoproject.org> 3.5.0-1
 - Update to 3.5.0
 
