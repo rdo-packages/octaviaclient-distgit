@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
+%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global with_doc 1
 
@@ -9,7 +9,7 @@
 Client for OpenStack Octavia (Load Balancer as a Service)
 
 Name:           python-%{pypi_name}
-Version:        3.1.0
+Version:        3.1.1
 Release:        1%{?dist}
 Summary:        Client for OpenStack Octavia (Load Balancer as a Service)
 
@@ -158,6 +158,9 @@ stestr --test-path $OS_TEST_PATH run
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+* Mon Mar 04 2024 RDO <dev@lists.rdoproject.org> 3.1.1-1
+- Update to 3.1.1
+
 * Wed Sep 14 2022 RDO <dev@lists.rdoproject.org> 3.1.0-1
 - Update to 3.1.0
 
