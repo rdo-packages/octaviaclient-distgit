@@ -70,7 +70,6 @@ Summary:        OpenStack Octavia client tests
 
 Requires:       python3-%{pypi_name} = %{version}-%{release}
 Requires:       python3-fixtures >= 1.3.1
-Requires:       python3-mock
 Requires:       python3-testtools
 Requires:       python3-subunit >= 0.0.18
 Requires:       python3-osc-lib >= 1.14.1
