@@ -153,3 +153,4 @@ rm -f ./octaviaclient/tests/unit/test_hacking.py
 %{python3_sitelib}/%{pypi_name}/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/python-octaviaclient/commit/c4dd1e1e37d89d8f733e01af7c23df17caaa87c7
